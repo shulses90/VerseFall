@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Versefall: War of the Absolutes</title>
+
+    <!-- SEO & Social Media Meta Tags -->
+    <meta name="description" content="A dynamic, AI-powered strategic text adventure. Choose a faction, forge alliances, and fight the encroaching silence of The Absolute in a multiverse of conflicting ideologies." />
+    
+    <!-- Open Graph / Facebook / LinkedIn -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Versefall: War of the Absolutes" />
+    <meta property="og:description" content="Command your faction in this AI-generated sci-fi text adventure. Every choice matters." />
+    <!-- Using a dynamic placeholder service ensures the thumbnail always works without hosting a file -->
+    <meta property="og:image" content="https://placehold.co/1200x630/0f172a/d97706/png?text=VERSEFALL%0AWar+of+the+Absolutes&font=roboto" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Versefall: War of the Absolutes" />
+    <meta name="twitter:description" content="Command your faction in this AI-generated sci-fi text adventure. Every choice matters." />
+    <meta name="twitter:image" content="https://placehold.co/1200x630/0f172a/d97706/png?text=VERSEFALL%0AWar+of+the+Absolutes&font=roboto" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              'pixel': ['"VT323"', 'monospace'],
+            },
+            keyframes: {
+              'fade-in-up': {
+                '0%': {
+                  opacity: '0',
+                  transform: 'translateY(10px)'
+                },
+                '100%': {
+                  opacity: '1',
+                  transform: 'translateY(0)'
+                },
+              },
+               'fade-in': {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' },
+              },
+              'blink': {
+                '0%, 100%': { opacity: '1' },
+                '50%': { opacity: '0' },
+              },
+              'scanline': {
+                '0%': { transform: 'translateY(0%)' },
+                '100%': { transform: 'translateY(100%)' }
+              }
+            },
+            animation: {
+              'fade-in-up': 'fade-in-up 0.5s ease-out forwards',
+              'fade-in': 'fade-in 0.5s ease-out forwards',
+              'blink': 'blink 1s step-end infinite',
+              'scanline': 'scanline 8s linear infinite',
+            },
+          },
+        },
+      }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.22.0"
+  }
+}
+</script>
+<style>
+  body {
+    overflow-x: hidden;
+    text-shadow: 0 0 2px rgba(217, 119, 6, 0.3); /* Slight Amber Glow */
+  }
+  img {
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+  }
+  
+  /* CRT Scanline Effect */
+  .scanlines {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      to bottom,
+      rgba(18, 16, 16, 0) 50%,
+      rgba(0, 0, 0, 0.25) 50%
+    );
+    background-size: 100% 4px;
+    pointer-events: none;
+    z-index: 50;
+  }
+  
+  /* Moving Scanline Bar */
+  .scanline-bar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(255, 255, 255, 0.05) 50%, rgba(0,0,0,0) 100%);
+    opacity: 0.1;
+    background-size: 100% 50%;
+    animation: scanline 10s linear infinite;
+    pointer-events: none;
+    z-index: 51;
+  }
+  
+  /* Vignette */
+  .vignette {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: radial-gradient(circle, rgba(0,0,0,0) 60%, rgba(0,0,0,0.8) 100%);
+    pointer-events: none;
+    z-index: 52;
+  }
+
+  /* Scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0f172a; 
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #4b5563; 
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #d97706; 
+  }
+</style>
+</head>
+  <body class="bg-gray-950 text-gray-300 font-pixel selection:bg-amber-900 selection:text-white">
+    <div class="scanlines"></div>
+    <div class="scanline-bar"></div>
+    <div class="vignette"></div>
+    <div id="root" class="relative z-10"></div>
+  </body>
+</html>

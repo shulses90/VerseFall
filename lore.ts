@@ -1,0 +1,118 @@
+import { LoreEntry } from './types';
+
+// Using a Record for easier lookup by ID
+export const LORE_DATA: Record<string, LoreEntry> = {
+  // Entities
+  celestes: {
+    id: 'celestes',
+    category: 'Cosmic Entities',
+    category_fr: 'Entités Cosmiques',
+    title: 'The Célestes',
+    title_fr: 'Les Célestes',
+    content: 'Beings of pure law and order who secretly seek to impose a "Silent Perfection" upon the multiverse—a final state where all reality is frozen into an immutable, eternal, and lifeless crystal. They view free will as a cosmic flaw and are the hidden antagonists of the current age.',
+    content_fr: 'Des êtres de pure loi et d\'ordre qui cherchent secrètement à imposer une "Perfection Silencieuse" au multivers - un état final où toute la réalité est gelée en un cristal immuable, éternel et sans vie. Ils considèrent le libre arbitre comme un défaut cosmique et sont les antagonistes cachés de l\'ère actuelle.',
+  },
+  demons: {
+    id: 'demons',
+    category: 'Cosmic Entities',
+    category_fr: 'Entités Cosmiques',
+    title: 'The Démons',
+    title_fr: 'Les Démons',
+    content: 'Beings of chaos and change, often portrayed as the mythical antagonists of the Célestes. Their nature is not inherently evil, but rather a necessary counterbalance to absolute order. The Célestes manipulate their invasions to further their own goals.',
+    content_fr: 'Des êtres de chaos et de changement, souvent dépeints comme les antagonistes mythiques des Célestes. Leur nature n\'est pas intrinsèquement mauvaise, mais plutôt un contrepoids nécessaire à l\'ordre absolu. Les Célestes manipulent leurs invasions pour servir leurs propres objectifs.',
+  },
+  labsolu: {
+    id: 'labsolu',
+    category: 'Cosmic Entities',
+    category_fr: 'Entités Cosmiques',
+    title: "L'Absolu (Death)",
+    title_fr: "L'Absolu (La Mort)",
+    content: 'A neutral and necessary cosmic force representing conclusion and finality. L\'Absolu is not an entity of malice, but an integral part of the multiversal cycle. It has been imprisoned by the Célestes, its power being siphoned to create instability across the verses.',
+    content_fr: 'Une force cosmique neutre et nécessaire représentant la conclusion et la finalité. L\'Absolu n\'est pas une entité malveillante, mais une partie intégrante du cycle multiversel. Il a été emprisonné par les Célestes, son pouvoir étant siphonnée pour créer l\'instabilité à travers les versets.',
+  },
+  // Factions
+  aethelgard: {
+    id: 'aethelgard',
+    category: 'Factions',
+    category_fr: 'Factions',
+    title: 'Aethelgard Compact',
+    title_fr: 'Pacte Aethelgard',
+    content: 'A hyper-capitalist republic valuing profit and technological supremacy. Their military relies on advanced drones, mechs, and precise orbital strikes. Their society is built on contracts and the relentless pursuit of efficiency.',
+    content_fr: 'Une république hyper-capitaliste valorisant le profit et la suprématie technologique. Leur armée repose sur des drones avancés, des mechs et des frappes orbitales précises. Leur société est bâtie sur les contrats et la poursuite incessante de l\'efficacité.',
+  },
+  veridian: {
+    id: 'veridian',
+    category: 'Factions',
+    category_fr: 'Factions',
+    title: 'Veridian Sovereignties',
+    title_fr: 'Souverainetés Veridian',
+    content: 'A coalition of ancient peoples defending the natural cycle of life and death. They command magically-enhanced warriors and giant summoned beasts, living in symbiosis with their worlds.',
+    content_fr: 'Une coalition de peuples anciens défendant le cycle naturel de la vie et de la mort. Ils commandent des guerriers améliorés par la magie et d\'énormes bêtes invoquées, vivant en symbiose avec leurs mondes.',
+  },
+  chronomach: {
+    id: 'chronomach',
+    category: 'Factions',
+    category_fr: 'Factions',
+    title: 'Chronomach Guilds',
+    title_fr: 'Guildes Chronomach',
+    content: 'A cyber-punk society obsessed with transhumanism and individual freedom. They excel in asymmetric warfare: assassins, info-wars, and lightning raids. They believe the flesh is a cage to be surpassed.',
+    content_fr: 'Une société cyberpunk obsédée par le transhumanisme et la liberté individuelle. Ils excellent dans la guerre asymétrique : assassins, guerres de l\'information et raids éclairs. Ils croient que la chair est une cage à dépasser.',
+  },
+  celestial: {
+    id: 'celestial',
+    category: 'Factions',
+    category_fr: 'Factions',
+    title: 'Celestial Purity',
+    title_fr: 'Pureté Céleste',
+    content: 'A monolithic theocracy fueled by unwavering faith. They might see the enemy\'s perfect order as a divine calling, making them a dangerous wildcard. Their armies are composed of zealous crusaders and angelic constructs.',
+    content_fr: 'Une théocratie monolithique alimentée par une foi inébranlable. Ils pourraient voir l\'ordre parfait de l\'ennemi comme un appel divin, ce qui en fait un joker dangereux. Leurs armées sont composées de croisés zélés et de constructions angéliques.',
+  },
+  weavers: {
+    id: 'weavers',
+    category: 'Factions',
+    category_fr: 'Factions',
+    title: 'Ancient Weavers',
+    title_fr: 'Tisserands Anciens',
+    content: 'Cultures wielding esoteric powers who understand the cosmic balance. They use reality-bending spells and summon ancestral spirits to protect the integrity of the multiverse.',
+    content_fr: 'Des cultures maniant des pouvoirs ésotériques qui comprennent l\'équilibre cosmique. Ils utilisent des sorts qui déforment la réalité et invoquent des esprits ancestraux pour protéger l\'intégrité du multivers.',
+  },
+  pantheon: {
+    id: 'pantheon',
+    category: 'Factions',
+    category_fr: 'Factions',
+    title: 'Pantheon Ascendant',
+    title_fr: 'Panthéon Ascendant',
+    content: 'Heroic societies led by demigods and legendary champions. Their warfare centers on epic individuals whose glorious deeds can turn the tide of battle. They believe in the power of myth and legend.',
+    content_fr: 'Des sociétés héroïques dirigées par des demi-dieux et des champions légendaires. Leur art de la guerre est centré sur des individus épiques dont les actes glorieux peuvent renverser le cours de la bataille. Ils croient au pouvoir du mythe et de la légende.',
+  },
+  // Campaigns
+  absolutist_war: {
+    id: 'absolutist_war',
+    category: 'Campaigns',
+    category_fr: 'Campagnes',
+    title: 'War of the Absolutes',
+    title_fr: 'La Guerre des Absolus',
+    content: 'A placeholder entry describing the central conflict of the game, a multiverse-spanning war against the encroaching silence of The Absolute, secretly orchestrated by the Célestes.',
+    content_fr: 'Une entrée de remplacement décrivant le conflit central du jeu, une guerre à l\'échelle du multivers contre le silence envahissant de l\'Absolu, secrètement orchestrée par les Célestes.',
+  },
+  // Technology
+  verse_drive: {
+    id: 'verse_drive',
+    category: 'Technology',
+    category_fr: 'Technologie',
+    title: 'Verse-Drive',
+    title_fr: 'Le Moteur-Verse',
+    content: 'A placeholder entry for the theoretical technology that allows factions to traverse the vast emptiness between universes, a cornerstone of inter-verse trade, diplomacy, and warfare.',
+    content_fr: 'Une entrée de remplacement pour la technologie théorique qui permet aux factions de traverser le vide immense entre les univers, pierre angulaire du commerce, de la diplomatie et de la guerre inter-verses.',
+  },
+  // Cosmic Events
+  great_silence: {
+    id: 'great_silence',
+    category: 'Cosmic Events',
+    category_fr: 'Événements Cosmiques',
+    title: 'The Great Silence',
+    title_fr: 'Le Grand Silence',
+    content: 'A placeholder entry for the prophesied end-state sought by the Célestes, where all motion, change, and life cease, resulting in a perfectly ordered but dead multiverse.',
+    content_fr: 'Une entrée de remplacement pour l\'état final prophétisé recherché par les Célestes, où tout mouvement, changement et vie cessent, aboutissant à un multivers parfaitement ordonné mais mort.',
+  },
+};
