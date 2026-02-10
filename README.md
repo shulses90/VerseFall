@@ -6,18 +6,43 @@ Dans ce jeu, vous incarnez le dirigeant d'une des grandes factions du multivers,
 
 ## 🌟 Présentation
 
-Le multivers est menacé par un Ordre parfait et terrifiant. Les Célestes, des êtres de loi pure, cherchent à figer toute réalité dans un cristal immuable. En tant que leader, vous devrez :
+Le multivers est en proie à une guerre secrète. Alors que les morts se relèvent et que des cultes fanatiques sèment le chaos, une menace plus insidieuse se profile. Les Célestes, des êtres de loi pure, cherchent à figer toute réalité dans un cristal immuable. Ils manipulent les événements depuis l'ombre, utilisant même les terrifiants Démons comme pions.
+
+En tant que leader, vous devrez :
 - **Gérer des crises** : Cultes internes, invasions de morts-vivants, diplomatie tendue.
 - **Faire des choix moraux** : La fin justifie-t-elle les moyens ? La force brute ou l'alliance ?
 - **Découvrir le Lore** : Percez les secrets de L'Absolu (la Mort) et des Démons.
 
-### Les Factions Jouables
-- **Pacte Aethelgard** : République hyper-capitaliste et technologique.
-- **Souverainetés Veridian** : Coalition symbiotique avec la nature.
-- **Guildes Chronomach** : Société cyberpunk transhumaniste.
-- **Pureté Céleste** : Théocratie monolithique (un choix risqué !).
-- **Tisserands Anciens** : Gardiens de l'équilibre cosmique et de la magie.
-- **Panthéon Ascendant** : Société héroïque de demi-dieux.
+## 🏛️ Les Factions
+
+Choisissez votre camp parmi six puissances uniques, chacune avec sa philosophie et son style visuel :
+
+*   **Pacte Aethelgard**
+    *   *Philosophie* : Une république hyper-capitaliste où le profit et l'efficacité priment.
+    *   *Style* : Drones élégants, mechs de combat, néons bleus et oranges, architecture industrielle.
+*   **Souverainetés Veridian**
+    *   *Philosophie* : Une coalition en symbiose avec la nature, défendant le cycle de la vie et de la mort.
+    *   *Style* : Forêts bioluminescentes, armures d'os, bêtes géantes invoquées, magie druidique.
+*   **Guildes Chronomach**
+    *   *Philosophie* : Une société cyberpunk transhumaniste obsédée par l'amélioration technologique et la liberté individuelle.
+    *   *Style* : Villes pluvieuses, implants cybernétiques, hologrammes publicitaires, hackers de l'ombre.
+*   **Pureté Céleste**
+    *   *Philosophie* : Une théocratie monolithique guidée par une foi inébranlable et un zèle purificateur.
+    *   *Style* : Cathédrales spatiales en marbre blanc, filigranes d'or, constructions angéliques, lumière aveuglante.
+*   **Tisserands Anciens**
+    *   *Philosophie* : Gardiens de l'équilibre cosmique utilisant des arts ésotériques pour protéger la réalité.
+    *   *Style* : Runes flottantes, nébuleuses cosmiques, rituels mystiques, énergie violette et éthérée.
+*   **Panthéon Ascendant**
+    *   *Philosophie* : Une société héroïque menée par des demi-dieux, où la gloire personnelle est la plus haute vertu.
+    *   *Style* : Architecture gréco-romaine futuriste, armures dorées, lances énergétiques, poses héroïques.
+
+## 📜 Lore Profond
+
+L'univers de Versefall repose sur trois piliers cosmiques :
+
+1.  **Les Célestes** : Des êtres d'ordre absolu. Leur but est la "Perfection Silencieuse", un univers sans vie, sans changement, et sans souffrance. Ils voient le libre arbitre comme une erreur.
+2.  **Les Démons** : Des agents du chaos et du changement. Bien que destructeurs, ils sont essentiels à la vitalité de l'univers. Les Célestes les utilisent pour pousser les mortels à désirer l'ordre à tout prix.
+3.  **L'Absolu (La Mort)** : Une force neutre et nécessaire. Elle a été emprisonnée par les Célestes, ce qui a brisé le cycle naturel et causé la levée des morts.
 
 ## 🛠️ Prérequis
 
@@ -59,7 +84,7 @@ Vous pouvez installer le jeu localement sur votre PC.
         ```env
         VITE_GEMINI_API_KEY=AIzaSyVotreCléSecreteIci
         ```
-    *   *(Optionnel)* Vous pouvez changer les modèles utilisés si vous avez accès à des versions spécifiques :
+    *   *(Optionnel)* Vous pouvez changer les modèles utilisés :
         ```env
         VITE_GEMINI_MODEL=gemini-1.5-flash
         VITE_IMAGEN_MODEL=imagen-3.0-generate-001
@@ -75,26 +100,42 @@ npm run dev
 
 Ouvrez ensuite votre navigateur à l'adresse indiquée (généralement `http://localhost:3000` ou `http://localhost:5173`).
 
-## 📖 Tutoriel de Fonctionnement
+## 🎮 Mécaniques de Jeu
 
-1.  **Écran de Démarrage** : Cliquez sur "Commencer la Transmission".
-2.  **Choix de la Faction** : Sélectionnez la faction que vous souhaitez incarner. Chaque faction a sa propre philosophie et son style visuel.
-3.  **L'Aventure** :
-    *   L'IA générera une scène et une image (pixel art rétro).
-    *   Lisez le texte (il défile comme sur un vieux terminal).
-    *   Trois choix vous seront proposés. Il n'y a pas de "bon" choix évident.
-    *   **Attention** : Vos actions vous mènent vers l'une des 3 fins possibles.
-4.  **Les Fins** :
-    *   🔴 **Fin Tyrannique** : Vous gagnez par la force brute, mais devenez un dictateur.
-    *   ⚪ **Fin de la Stagnation** : L'ordre parfait des Célestes l'emporte. L'univers se fige.
-    *   🟢 **Fin de l'Éveil** : La "bonne" fin, difficile à obtenir. Nécessite de comprendre l'ennemi, de nouer des alliances et de libérer L'Absolu.
-5.  **Le Codex** : En haut à droite, le bouton "Codex" s'allume quand vous découvrez de nouvelles informations sur l'univers. Consultez-le pour comprendre les enjeux cachés.
+### 1. Le Codex
+En haut à droite de l'écran, un bouton "Codex" apparaît lorsque vous découvrez des secrets.
+*   **Fonctionnement** : L'IA détecte quand une information clé est révélée dans l'histoire et débloque l'entrée correspondante.
+*   **Stratégie** : Consulter le Codex peut vous donner des indices sur la vraie nature de vos ennemis.
 
-## ⚠️ Dépannage
+### 2. Intensité et Musique
+La musique du jeu est dynamique.
+*   En temps normal, le thème de votre faction joue pour l'immersion.
+*   Si la scène générée est jugée "intense" (combat, révélation), la musique bascule sur un thème de bataille épique.
 
-- **Erreur "API_KEY environment variable not set"** : Vérifiez que vous avez bien créé le fichier `.env` à la racine (pas dans `src`) et qu'il contient votre clé. Redémarrez le serveur (`Ctrl+C` puis `npm run dev`) après avoir modifié le `.env`.
-- **Erreur de génération d'image** : Parfois, le modèle d'image peut échouer ou être surchargé. Le jeu continuera avec l'histoire même sans image.
-- **Modèle introuvable** : Si vous avez une erreur 404 liée au modèle, essayez de changer `VITE_GEMINI_MODEL` dans le `.env` pour `gemini-pro` ou `gemini-1.5-flash`.
+### 3. Les Trois Fins
+Vos choix ne sont pas binaires (Bien/Mal). Ils mènent vers trois destinées :
+
+*   🔴 **La Fin Tyrannique (Mauvaise Fin)**
+    *   *Comment l'obtenir* : Répondez à la violence par la violence. Refusez les alliances. Écrasez vos ennemis sans chercher à comprendre.
+    *   *Résultat* : Vous gagnez, mais vous devenez un dictateur impitoyable sur un univers en ruines.
+
+*   ⚪ **La Fin de la Stagnation (Fin Neutre)**
+    *   *Comment l'obtenir* : Acceptez les offres d'ordre et de sécurité. Laissez les Célestes vous "aider". Détruisez L'Absolu par mégarde.
+    *   *Résultat* : La paix règne, mais c'est la paix d'un cimetière. L'univers se fige dans une perfection éternelle.
+
+*   🟢 **La Fin de l'Éveil (Bonne Fin)**
+    *   *Comment l'obtenir* : C'est le chemin le plus difficile. Enquêtez sur les cultes. Écoutez vos alliés. Comprenez que les Démons ne sont pas la vraie menace. Libérez L'Absolu.
+    *   *Résultat* : L'équilibre est restauré. L'univers est sauf et libre d'évoluer.
+
+## 🔧 Personnalisation Avancée (Pour les développeurs)
+
+Si vous souhaitez modifier l'histoire ou les règles du jeu :
+
+1.  **Modifier le Scénario** :
+    Le "cerveau" du Maître de Jeu se trouve dans `services/prompts.ts`. Vous pouvez modifier la variable `systemInstruction` pour changer l'univers, les factions ou les conditions de victoire.
+
+2.  **Changer les Modèles IA** :
+    Outre le fichier `.env`, vous pouvez ajuster les paramètres de génération (température, topP) dans `services/geminiService.ts` pour rendre l'IA plus créative ou plus stricte.
 
 ---
 *Développé avec React, Vite et Google Gemini API.*
