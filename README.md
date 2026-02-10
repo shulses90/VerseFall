@@ -1,8 +1,10 @@
 # Versefall: War of the Absolutes
 
-Bienvenue dans **Versefall**, une aventure narrative stratégique textuelle propulsée par l'intelligence artificielle.
+Bienvenue dans **Versefall**, une aventure narrative stratégique textuelle propulsée par les technologies de pointe de **Google** (Gemini pour l'histoire, Imagen pour les visuels).
 
 Dans ce jeu, vous incarnez le dirigeant d'une des grandes factions du multivers, luttant pour la survie face à une menace cosmique grandissante : les Célestes et leur "Perfection Silencieuse". Vos choix détermineront non seulement le destin de votre peuple, mais aussi la nature même de la réalité.
+
+Ce projet est conçu pour être accessible aussi bien en local que via **Google AI Studio**.
 
 ## 🌟 Présentation
 
@@ -113,19 +115,9 @@ La musique du jeu est dynamique.
 *   Si la scène générée est jugée "intense" (combat, révélation), la musique bascule sur un thème de bataille épique.
 
 ### 3. Les Trois Fins
-Vos choix ne sont pas binaires (Bien/Mal). Ils mènent vers trois destinées :
+Vos choix ne sont pas binaires (Bien/Mal). Ils mènent vers **3 fins distinctes et uniques**.
 
-*   🔴 **La Fin Tyrannique (Mauvaise Fin)**
-    *   *Comment l'obtenir* : Répondez à la violence par la violence. Refusez les alliances. Écrasez vos ennemis sans chercher à comprendre.
-    *   *Résultat* : Vous gagnez, mais vous devenez un dictateur impitoyable sur un univers en ruines.
-
-*   ⚪ **La Fin de la Stagnation (Fin Neutre)**
-    *   *Comment l'obtenir* : Acceptez les offres d'ordre et de sécurité. Laissez les Célestes vous "aider". Détruisez L'Absolu par mégarde.
-    *   *Résultat* : La paix règne, mais c'est la paix d'un cimetière. L'univers se fige dans une perfection éternelle.
-
-*   🟢 **La Fin de l'Éveil (Bonne Fin)**
-    *   *Comment l'obtenir* : C'est le chemin le plus difficile. Enquêtez sur les cultes. Écoutez vos alliés. Comprenez que les Démons ne sont pas la vraie menace. Libérez L'Absolu.
-    *   *Résultat* : L'équilibre est restauré. L'univers est sauf et libre d'évoluer.
+À vous de découvrir comment les atteindre... mais sachez que chaque action, chaque alliance et chaque sacrifice aura des conséquences irréversibles sur le destin du multivers.
 
 ## 🔧 Personnalisation Avancée (Pour les développeurs)
 
