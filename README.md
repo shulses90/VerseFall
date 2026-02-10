@@ -131,3 +131,4 @@ Si vous souhaitez modifier l'histoire ou les règles du jeu :
 
 ---
 *Développé avec React, Vite et Google Gemini API.*
+*Milton Thomas*
