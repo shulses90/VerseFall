@@ -93,7 +93,7 @@ export const getNextScene = async (history: StoryTurn[], choice: string | null, 
     };
 
   } catch (error) {
-    console.error("Error generating content from Gemini API:", error);
+    console.error("Error generating content from Gemini API");
     throw new Error("API_ERROR");
   }
 };
@@ -146,7 +146,7 @@ export const generateImageForScene = async (sceneText: string, factionName: stri
         return `data:image/png;base64,${base64ImageBytes}`;
 
     } catch(error) {
-        console.error("Error generating image from Gemini API:", error);
+        console.error("Error generating image from Gemini API");
         // Return a placeholder or re-throw, for now we'll just log and let it fail gracefully
         throw new Error("IMAGE_API_ERROR");
     }

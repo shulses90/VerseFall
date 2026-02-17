@@ -149,7 +149,7 @@ const App: React.FC = () => {
             )
         );
     } catch (imageError) {
-        console.error("Could not generate image, continuing without it.", imageError);
+        console.error("Could not generate image, continuing without it.");
         setStoryTurns(prevTurns => 
             prevTurns.map(turn => 
                 turn.id === newTurn.id ? { ...turn, imageState: 'error' } : turn
