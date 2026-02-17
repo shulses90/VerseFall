@@ -48,7 +48,7 @@ export const getNextScene = async (history: StoryTurn[], choice: string | null, 
     const langString = language === 'fr' ? 'French' : 'English';
     const finalSystemInstruction = `${systemInstruction}\n\nIMPORTANT: All your responses, including the 'scene' and 'choices' properties in the JSON output, must be written entirely in ${langString}.`;
 
-    let prompt;
+    let prompt: string;
 
     if (choice === null) {
       const playerFactionId = playerFaction.id;

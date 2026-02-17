@@ -1,5 +1,5 @@
 import React, { useState, useCallback, useRef, useEffect } from 'react';
-import { GameState, StoryTurn, Faction } from './types';
+import { GameState, StoryTurn, Faction, GeminiResponse } from './types';
 import { getNextScene, generateImageForScene } from './services/geminiService';
 import { playMusic, stopMusic, toggleMute } from './services/audioManager';
 import Header from './components/Header';
@@ -88,7 +88,7 @@ const App: React.FC = () => {
     setGameState(GameState.LOADING);
     setError(null);
 
-    let textResponse;
+    let textResponse: GeminiResponse;
     try {
       // 1. Get the text part of the story first
       textResponse = await getNextScene(storyTurns, choice, playerFaction, language);
