@@ -12,8 +12,8 @@ interface EncyclopediaProps {
 const allLore: LoreEntry[] = Object.values(LORE_DATA);
 
 const Encyclopedia: React.FC<EncyclopediaProps> = ({ unlockedIds, onClose, language }) => {
-  const groupedLore = useMemo(() => {
-    return allLore.reduce((acc, entry) => {
+  const sortedGroupedLore = useMemo(() => {
+    const groups = allLore.reduce((acc, entry) => {
       const category = language === 'fr' ? entry.category_fr : entry.category;
       if (!acc[category]) {
         acc[category] = [];
@@ -21,6 +21,10 @@ const Encyclopedia: React.FC<EncyclopediaProps> = ({ unlockedIds, onClose, langu
       acc[category].push(entry);
       return acc;
     }, {} as Record<string, LoreEntry[]>);
+
+    return Object.entries(groups).sort(([categoryA], [categoryB]) =>
+      categoryA.localeCompare(categoryB)
+    );
   }, [language]);
 
   const [selectedEntry, setSelectedEntry] = useState<LoreEntry | null>(null);
@@ -76,14 +80,10 @@ const Encyclopedia: React.FC<EncyclopediaProps> = ({ unlockedIds, onClose, langu
         </header>
         <div className="flex flex-col md:flex-row flex-grow overflow-hidden">
             <aside className="w-full md:w-1/3 border-b-2 md:border-b-0 md:border-r-2 border-amber-600/50 overflow-y-auto p-2">
-                {/* FIX: Sort entries during render to ensure reliable ordering and to fix type inference issues. */}
-                {Object.entries(groupedLore)
-                  .sort(([categoryA], [categoryB]) => categoryA.localeCompare(categoryB))
-                  .map(([category, entries]) => (
+                {sortedGroupedLore.map(([category, entries]) => (
                     <div key={category} className="mb-4">
                         <h4 className="text-gray-500 uppercase tracking-widest px-2 pb-1 text-sm">{category}</h4>
-                        {/* FIX: Use Array.isArray as a type guard because TypeScript infers `entries` as `unknown`. */}
-                        {Array.isArray(entries) && entries.map(renderEntry)}
+                        {entries.map(renderEntry)}
                     </div>
                 ))}
             </aside>
