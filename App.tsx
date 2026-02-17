@@ -10,6 +10,7 @@ import SceneImage from './components/SceneImage';
 import GameEndScreen from './components/GameEndScreen';
 import Encyclopedia from './components/Encyclopedia';
 import AudioControl from './components/AudioControl';
+import LanguageSwitcher from './components/LanguageSwitcher';
 import { translations, Language } from './translations';
 
 const FACTION_IDS: (keyof typeof translations.en.factions)[] = [
@@ -277,23 +278,6 @@ const App: React.FC = () => {
     );
   }
 
-  const LanguageSwitcher = () => (
-    <div className="flex justify-center space-x-2">
-      <button 
-        onClick={() => setLanguage('en')}
-        className={`px-3 py-1 text-xs uppercase tracking-widest transition-colors ${language === 'en' ? 'text-amber-400 bg-gray-800' : 'text-gray-600 hover:text-amber-400'}`}
-      >
-        English
-      </button>
-      <button 
-        onClick={() => setLanguage('fr')}
-        className={`px-3 py-1 text-xs uppercase tracking-widest transition-colors ${language === 'fr' ? 'text-amber-400 bg-gray-800' : 'text-gray-600 hover:text-amber-400'}`}
-      >
-        Français
-      </button>
-    </div>
-  );
-
   return (
     <div className="min-h-screen flex flex-col items-center p-4 relative z-10">
       {isEncyclopediaOpen && <Encyclopedia unlockedIds={unlockedLore} onClose={() => setIsEncyclopediaOpen(false)} language={language} />}
@@ -328,7 +312,7 @@ const App: React.FC = () => {
         ) : <div className="h-8"/>}
         <div className="flex items-center justify-center space-x-4 bg-gray-950/50 p-2 rounded-full backdrop-blur-sm mx-auto">
             <AudioControl isMuted={isMuted} onToggleMute={handleToggleMute} />
-            <LanguageSwitcher />
+            <LanguageSwitcher currentLanguage={language} onLanguageChange={setLanguage} />
         </div>
       </footer>
     </div>
