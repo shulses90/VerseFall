@@ -76,14 +76,18 @@ const Encyclopedia: React.FC<EncyclopediaProps> = ({ unlockedIds, onClose, langu
         </header>
         <div className="flex flex-col md:flex-row flex-grow overflow-hidden">
             <aside className="w-full md:w-1/3 border-b-2 md:border-b-0 md:border-r-2 border-amber-600/50 overflow-y-auto p-2">
-                {/* FIX: Sort entries during render to ensure reliable ordering and to fix type inference issues. */}
                 {Object.entries(groupedLore)
-                  .sort(([categoryA], [categoryB]) => categoryA.localeCompare(categoryB))
+                  .sort(([categoryA], [categoryB]) => categoryA.localeCompare(categoryB, language))
                   .map(([category, entries]) => (
                     <div key={category} className="mb-4">
                         <h4 className="text-gray-500 uppercase tracking-widest px-2 pb-1 text-sm">{category}</h4>
-                        {/* FIX: Use Array.isArray as a type guard because TypeScript infers `entries` as `unknown`. */}
-                        {Array.isArray(entries) && entries.map(renderEntry)}
+                        {Array.isArray(entries) && [...entries]
+                          .sort((a, b) => {
+                            const titleA = language === 'fr' ? a.title_fr : a.title;
+                            const titleB = language === 'fr' ? b.title_fr : b.title;
+                            return titleA.localeCompare(titleB, language);
+                          })
+                          .map(renderEntry)}
                     </div>
                 ))}
             </aside>
