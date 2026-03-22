@@ -69,5 +69,4 @@ When the player has met the conditions for one of the three endings (defeating t
 -   **Chronomach Guilds:** Cyber-punk society of transhumanists.
 -   **Celestial Purity:** Monolithic theocracy.
 -   **Ancient Weavers:** Cultures of cosmic balance.
--   **Pantheon Ascendant:** Heroic societies of demigods.
 -   **Pantheon Ascendant:** Heroic societies of demigods.`;
